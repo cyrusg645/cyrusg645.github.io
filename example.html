@@ -1,0 +1,61 @@
+<html>
+<head>
+    <script></script>
+    <!-- style / CCS are synonyms ; CCS => cascading sytle sheets -->
+    <style>
+        /* inside the tags is ccs , not HTML code */
+        h1 {
+            color: red;
+            background: green;
+            margin: 0px; 
+        }
+        
+        .bestsellers { 
+            background: yellow;
+        }
+
+        .favorites {
+            text-decoration: underline;
+        }
+
+        .menu {
+            background: green; /* #ffffff = white */
+        }
+
+        body {
+            margin: 0px;
+        }
+
+        li:hover {
+            background: red;
+        }
+
+        li {
+            background: yellow;
+            display:inline-block; 
+            width: 20%
+        }
+
+    </style> 
+</head>
+<body>
+    <!-- HTML => content ; not formating / making it pretty -->
+    <!--  h is for header -->
+    <div class=menu>
+        <h1>My books webpage</h1>
+        <!-- ol = ordered list; u = unordered -->
+    <ul>
+        <!-- li = list item -->
+        <li class=bestsellers> Where the Red Fern Grows </li>
+        <a href= "The-hunger-games.html"><li class=favorites> </li> </a>
+        <li class=bestsellers> To kill a mockingbird </li>
+    </ul>
+</div>
+<div class=content>
+    <p>This is my paragraph</p>
+    <!-- 2 special tags: div, span -->
+    <p> This is a paragraph about the best selling book <span class=bestsellers>To Kill a Mockingbird </span></p>
+    <!-- Block elements (like paragraph vs. inline elements (goes inside a paragraph)-->
+    </div>
+</body>
+</html>
