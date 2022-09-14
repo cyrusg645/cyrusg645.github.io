@@ -1,0 +1,52 @@
+h1 {
+    color: brown;
+    background: gray;
+    text-align: center; 
+}
+
+.bestsellers { 
+    background: rgb(139, 139, 180);
+}
+
+.menu {
+    background: rgb(66, 92, 66);
+}
+
+body {
+    margin: 0px;
+}
+
+li:hover {
+    background: red;
+}
+
+li {
+    background: rgb(244, 244, 122);
+    text-align: center;
+    display:inline-block; 
+    width: 32%
+} 
+
+.myDiv {
+border: 5px outset red;
+background-color: lightblue;
+text-align: center;
+}
+
+.myDiv2 {
+border: 5px outset green;
+background-color: lightblue;
+text-align: center;
+}
+
+.myDiv3 {
+border: 5px outset yellow;
+background-color: lightblue;
+text-align: center;
+}
+
+.myDiv4 {
+border: 5px outset orange;
+background-color: lightblue;
+text-align: center;
+}
