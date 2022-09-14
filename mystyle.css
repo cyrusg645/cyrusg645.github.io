@@ -21,10 +21,8 @@ li:hover {
 }
 
 li {
-    background: rgb(244, 244, 122);
-    text-align: center;
-    display:inline-block; 
-    width: 32%
+    background: rgb(244, 244, 122); 
+    width: 30%
 } 
 
 .myDiv {
@@ -41,6 +39,7 @@ text-align: center;
 a {
     font-size: 48px;
 }
+
 .myDiv3 {
 border: 5px outset yellow;
 background-color: lightblue;
