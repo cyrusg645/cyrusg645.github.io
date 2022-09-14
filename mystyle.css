@@ -29,7 +29,6 @@ li {
 
 .myDiv {
 border: 5px outset red;
-background-color: lightblue;
 text-align: center;
 }
 
@@ -39,6 +38,9 @@ background-color: lightblue;
 text-align: center;
 }
 
+a {
+    font-size: 48px;
+}
 .myDiv3 {
 border: 5px outset yellow;
 background-color: lightblue;
@@ -50,3 +52,13 @@ border: 5px outset orange;
 background-color: lightblue;
 text-align: center;
 }
+
+span#cool {
+    background-color: blueviolet;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
