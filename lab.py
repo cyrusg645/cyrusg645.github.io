@@ -28,6 +28,9 @@ In order to get credit, your functions must pass all of the test cases.
 '''
 
 
+from re import A
+
+
 def hypotenuse(a, b):
     '''
     Return the square root of a squared plus b squared.
@@ -37,9 +40,9 @@ def hypotenuse(a, b):
     >>> hypotenuse(12.0, 5.0)
     13.0
     '''
-    return (a**2 + b**2)**(0.5)
+    # return (a**2 + b**2)**(0.5)
 
-"""
+
 def is_even(n):
     '''
     Return True if n is even and False if n is odd.
@@ -57,10 +60,18 @@ def is_even(n):
     >>> is_even(-9)
     False
     '''
+  
     if n%2==0: 
         return True
     else:
         return False
+print(is_even(0)) 
+print(is_even(1))
+print(is_even(2000))
+print(is_even(-8))
+print(is_even(-9))
+  
+
 
 
 def is_odd(n):
@@ -78,6 +89,16 @@ def is_odd(n):
     >>> is_odd(-9)
     True
     '''
+   
+    if n%2==1:
+        return True
+    else:
+        return False
+print(is_odd(0)) 
+print(is_odd(1))
+print(is_odd(2000))
+print(is_odd(-8))
+print(is_odd(-9))
 
 
 def absolute_value(n):
@@ -97,6 +118,15 @@ def absolute_value(n):
     5.5
     '''
     
+    if n>0:
+        return n
+    else:
+        return n*(-1)
+print(absolute_value(5))
+print(absolute_value(-5))
+print(absolute_value(5.5))
+print(absolute_value(-5.5))
+
 
 def max_num(a, b):
     '''
@@ -114,6 +144,16 @@ def max_num(a, b):
     >>> max_num(4, 4)
     4
     '''
+  
+    if a>b:
+        return a
+    else:
+        return b 
+print(max_num(4,5))
+print(max_num(5,4))
+print(max_num(-4,-5))
+print(max_num(4,4))
+ 
     
 
 def max_num_4(a, b, c, d):
@@ -134,7 +174,34 @@ def max_num_4(a, b, c, d):
     >>> max_num_4(10,1,2,3)
     10
     '''
-    
+  
+    if a>b:
+        if a>c:
+            if a>d:
+                return a
+    if b>a:
+        if b>c:
+            if b>d:
+                return b
+    if c>a:
+        if c>b:
+            if c>d:
+                return c
+    if d>a:
+        if d>b:
+            if d>c:
+                return d
+print(max_num_4(1,2,3,4))
+print(max_num_4(2,3,4,1))
+print(max_num_4(3,4,1,2))
+print(max_num_4(4,1,2,3))
+print(max_num_4(10,1,2,3))
+
+
+
+  
+
+
 
 def max_num_abs(a, b):
     '''
@@ -152,6 +219,26 @@ def max_num_abs(a, b):
     >>> max_num_abs(4,4)
     4
     '''
+   
+    if a>0:
+        c=a
+    else:
+        c=a*(-1)
+    if b>0:
+        d=b
+    else:
+        d=b*(-1)
+        
+    if c>d:
+        return a
+    else:
+        return b
+    
+print(max_num_abs(4,5))
+print(max_num_abs(4,5))
+print(max_num_abs(-4,-5))
+print(max_num_abs(4,4))
+
 
 
 def is_leap_year(n):
@@ -177,6 +264,20 @@ def is_leap_year(n):
     >>> is_leap_year(2400)
     True
     '''
+
+    if n%100!=0 and n%4==0:
+        return True
+    if n%4==0 and n%400==0: 
+        return True
+    else:
+        return False
+print(is_leap_year(1582))
+print(is_leap_year(2000))
+print(is_leap_year(2018))
+print(is_leap_year(2019))
+print(is_leap_year(2020))
+print(is_leap_year(2200))
+print(is_leap_year(2400))
 
 
 def num_digits(n):
@@ -255,8 +356,6 @@ def is_prime(n):
     >>> is_prime(99)
     False
     '''
-    for x in range n:
-        if 
 
 def is_perfect_square(n):
     '''
@@ -325,4 +424,3 @@ def fibonacci(n):
     43466557686937456435688527675040625802564660517371780402481729089536555417949051890403879840079255169295922593080322634775209689623239873322471161642996440906533187938298969649928516003704476137795166849228875
     '''
     
-"""
