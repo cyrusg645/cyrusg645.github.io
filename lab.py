@@ -40,7 +40,9 @@ def hypotenuse(a, b):
     >>> hypotenuse(12.0, 5.0)
     13.0
     '''
-    # return (a**2 + b**2)**(0.5)
+    
+    return (a**2 + b**2)**(0.5)
+    
 
 
 def is_even(n):
@@ -60,7 +62,7 @@ def is_even(n):
     >>> is_even(-9)
     False
     '''
-  
+    
     if n%2==0: 
         return True
     else:
@@ -70,6 +72,7 @@ print(is_even(1))
 print(is_even(2000))
 print(is_even(-8))
 print(is_even(-9))
+    
   
 
 
@@ -89,7 +92,7 @@ def is_odd(n):
     >>> is_odd(-9)
     True
     '''
-   
+
     if n%2==1:
         return True
     else:
@@ -99,7 +102,7 @@ print(is_odd(1))
 print(is_odd(2000))
 print(is_odd(-8))
 print(is_odd(-9))
-
+    
 
 def absolute_value(n):
     '''
@@ -126,7 +129,7 @@ print(absolute_value(5))
 print(absolute_value(-5))
 print(absolute_value(5.5))
 print(absolute_value(-5.5))
-
+    
 
 def max_num(a, b):
     '''
@@ -144,7 +147,7 @@ def max_num(a, b):
     >>> max_num(4, 4)
     4
     '''
-  
+    
     if a>b:
         return a
     else:
@@ -153,7 +156,7 @@ print(max_num(4,5))
 print(max_num(5,4))
 print(max_num(-4,-5))
 print(max_num(4,4))
- 
+    
     
 
 def max_num_4(a, b, c, d):
@@ -174,7 +177,7 @@ def max_num_4(a, b, c, d):
     >>> max_num_4(10,1,2,3)
     10
     '''
-  
+    
     if a>b:
         if a>c:
             if a>d:
@@ -196,6 +199,7 @@ print(max_num_4(2,3,4,1))
 print(max_num_4(3,4,1,2))
 print(max_num_4(4,1,2,3))
 print(max_num_4(10,1,2,3))
+    
 
 
 
@@ -219,6 +223,7 @@ def max_num_abs(a, b):
     >>> max_num_abs(4,4)
     4
     '''
+    
    
     if a>0:
         c=a
@@ -238,6 +243,7 @@ print(max_num_abs(4,5))
 print(max_num_abs(4,5))
 print(max_num_abs(-4,-5))
 print(max_num_abs(4,4))
+    
 
 
 
@@ -264,7 +270,7 @@ def is_leap_year(n):
     >>> is_leap_year(2400)
     True
     '''
-
+    
     if n%100!=0 and n%4==0:
         return True
     if n%4==0 and n%400==0: 
@@ -278,6 +284,7 @@ print(is_leap_year(2019))
 print(is_leap_year(2020))
 print(is_leap_year(2200))
 print(is_leap_year(2400))
+    
 
 
 def num_digits(n):
@@ -308,8 +315,25 @@ def num_digits(n):
     >>> num_digits(-10)
     2
     '''
+    
+    if n>0:
+        n=n
+    else:
+        n=n*(-1)
+    total=0
+    while n>0:
+        total +=1
+        n //= 10
+    return total
+print(num_digits(5))
+print(num_digits(10))
+print(num_digits(45678))
+print(num_digits(123456789012345678901234567890))
+print(num_digits(-5))
+print(num_digits(-10))
 
 
+    
 def factorial(n):
     '''
     Return the factorial of n.
@@ -332,7 +356,16 @@ def factorial(n):
     >>> factorial(100)
     93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
     '''
-
+    factorial=1
+    for x in range(1,n+1):
+        factorial=x*factorial
+    return factorial 
+print(factorial(1))
+print(factorial(2))
+print(factorial(3))
+print(factorial(4))
+print(factorial(10))
+print(factorial(100))
 
 def is_prime(n):
     '''
@@ -356,6 +389,14 @@ def is_prime(n):
     >>> is_prime(99)
     False
     '''
+    if n == 1:
+        return False
+    for x in range(2,n):
+        if n%x == 0:
+            return False
+    return True
+
+        
 
 def is_perfect_square(n):
     '''
@@ -382,6 +423,11 @@ def is_perfect_square(n):
     >>> is_perfect_square(144)
     True
     '''
+    for i in range(0,n+1):
+        if i*i==n and n>=0:
+            return True
+    return False
+
 
 
 def fibonacci(n):
@@ -423,4 +469,14 @@ def fibonacci(n):
     >>> fibonacci(1000)
     43466557686937456435688527675040625802564660517371780402481729089536555417949051890403879840079255169295922593080322634775209689623239873322471161642996440906533187938298969649928516003704476137795166849228875
     '''
-    
+    if n==0: 
+        return 0
+    if n==1:
+        return 1
+    f0=0
+    f1=1
+    for i in range(0,n-1):
+        fn=f0+f1
+        f0=f1
+        f1=fn
+    return fn
