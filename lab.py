@@ -42,9 +42,6 @@ def hypotenuse(a, b):
     '''
     
     return (a**2 + b**2)**(0.5)
-    
-
-
 def is_even(n):
     '''
     Return True if n is even and False if n is odd.
@@ -423,7 +420,7 @@ def is_perfect_square(n):
     >>> is_perfect_square(144)
     True
     '''
-    for i in range(0,n+1):
+    for i in range (0, n+1):
         if i*i==n and n>=0:
             return True
     return False
