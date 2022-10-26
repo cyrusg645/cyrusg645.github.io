@@ -1,0 +1,27 @@
+xfilename = 'example_file'
+
+################################################################################
+# opening a file
+################################################################################
+
+#binary (think bytes)
+# r = read
+
+with open(xfilename, 'br') as f:
+    text = f.read()
+    text = text.decode('utf-8') # your VSCODE may have 
+print("text=",text)
+
+#remove the b, then python will automatically convert from bytes to string
+#called opening the file in text mode
+
+with open(xfilename, 'r', encoding='utf-8') as f:
+    text = f.read()
+print("text=",text)
+
+################################################################################
+# absolute vs relative paths
+################################################################################
+
+import os
+os.getcwd()
